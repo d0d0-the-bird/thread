@@ -1,16 +1,15 @@
-IDIR =.
+IDIR =..
 CC=gcc
 CFLAGS=-I$(IDIR)
 
-ODIR=BUILD/obj
-LDIR =../lib
+ODIR=build/obj
 
 LIBS=-lm
 
 _DEPS = thread.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o thread.o
+_OBJ = example1.o ../thread.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
